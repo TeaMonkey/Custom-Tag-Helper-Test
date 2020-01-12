@@ -1,0 +1,14 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <a asp-page="Privacy">Built-in anchor tag</a><br>
+    <anchorcustom jo="Privacy">Custom anchor tag</anchorcustom><br>
+    <anchorinherit asp-page="Privacy" jo="this is a cutom title">Custom anchor tag inheriting the built-in anchor tag (with title)</anchorinherit>
+
+    <p>Custom tags only appear to work if everything is in lower case and "@@addTagHelper *, Custom Tag Helper Test" is used rather than "@@addTagHelper *, Custom_Tag_Helper_Test"</p>
+</div>
